@@ -198,4 +198,10 @@ defaults write -g AppleKeyboardUIMode -int 0               # 还原全键盘访�
 
 ---
 
+## 8. 换电脑后同步到 GitHub
+
+完整资产包（含 `.git` 提交历史）已上传至 WorkBuddy 云端资料库，登录同一账号即可取回。解压后就是一个可直接 `git push` 的仓库，三种同步方式（命令行 / 网页拖拽 / GitHub CLI）以及新电脑上的重新编译与授权步骤，见 [`docs/SYNC-TO-GITHUB.md`](docs/SYNC-TO-GITHUB.md)。
+
+---
+
 本仓库记录的是一次完整的「硬件报文 → 用户态守护进程 → 系统服务」端到端适配，重点在于**用实测报文定位问题、用最小侵入方式补齐系统缺失的能力**。
