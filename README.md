@@ -1,6 +1,6 @@
 # 飞鼠按键 macOS 全适配（FeishuKeys）
 
-把一台 USB「飞鼠」键盘/触摸板（`USB Composite Device`，VID `0x2320` / PID `0x0912`）上的**全部专用按键**在 macOS 上点亮：电源、菜单栏、启动台、邮件、Safari、Spotlight、显示桌面等。
+把一台拼夕夕双模蓝牙无线 USB「飞鼠」键盘/触摸板（`USB Composite Device`，VID `0x2320` / PID `0x0912`）上的**全部专用按键**在 macOS 上点亮：电源、菜单栏、启动台、邮件、Safari、Spotlight、显示桌面等。
 
 实测环境：**macOS 12.7.6 Monterey (21H1320) / Macmini5,1 (Intel) / Xcode Command Line Tools `swiftc`**；对比方案 Karabiner-Elements 14.13.0。所有结论均来自本机真实按键日志与屏幕截图，不是推测。
 
@@ -27,7 +27,7 @@
 
 ## 1. 成果总览：按键对照表
 
-映射键格式 `UsagePage:Usage`。✅ = 已在 2026-11-15 17:27 与 17:34 两轮全键回归中由物理按键实测命中并执行成功。//注：AI自动生成顺序有误，具体顺序请以上面表格为准
+映射键格式 `UsagePage:Usage`。✅ = 已在 2026-11-15 17:27 与 17:34 两轮全键回归中由物理按键实测命中并执行成功。//注：AI自动生成顺序可能有误，具体顺序请以上面表格为准，请对照具体HID Usage
 
 | # | 物理按键 | HID Usage | 报告通道 | 动作 | 实现方式 | 实测 |
 |---|---|---|---|---|---|---|
