@@ -4,6 +4,25 @@
 
 实测环境：**macOS 12.7.6 Monterey (21H1320) / Macmini5,1 (Intel) / Xcode Command Line Tools `swiftc`**；对比方案 Karabiner-Elements 14.13.0。所有结论均来自本机真实按键日志与屏幕截图，不是推测。
 
+## 硬件实物
+
+![飞鼠键盘/触摸板正面](docs/images/feishu-keyboard-top.jpg)
+
+上图为适配的实体设备（USB Composite Device，VID `0x2320` / PID `0x0912`）。本项目点亮的专用按键分布如下：
+
+| 位置 | 按键 | HID Usage | 动作 |
+|---|---|---|---|
+| 左上竖排 1 | ⏻ 电源 | `0x01:0x0081` | 系统关机确认框 |
+| 左上竖排 2 | ≡ 三条杠 | `0x07:0x0065` | 展开 Apple 菜单栏 |
+| 左上竖排 3 | ✉ 邮件 | `0x0C:0x018A` | 打开 Mail |
+| 左上竖排 4 | ⏯ 播放/暂停 | `0x0C:0x0183` | 打开启动台 |
+| 右上竖排 1 | 🔍 放大镜 | `0x0C:0x0221` | Spotlight |
+| 右上竖排 2 | 🏠 房子 | `0x0C:0x0223` | 显示桌面 |
+| 右上竖排 3 | `e` 浏览器 | `0x0C:0x0196` | 打开 Safari |
+| 右上竖排 4 | ☰ 文档 | `0x07:0x0065` | 展开 Apple 菜单栏 |
+
+完整码表见 [`docs/BUTTON-MAP.md`](docs/BUTTON-MAP.md)。
+
 ---
 
 ## 1. 成果总览：按键对照表
@@ -99,10 +118,14 @@ flowchart TB
 ```
 feishu-keys/
 ├── README.md                    本文件
+├── LICENSE                      MIT
 ├── docs/
 │   ├── BUTTON-MAP.md            完整 26 条码表 + 实测日志证据
 │   ├── HID-PROTOCOL.md          HID 报告格式、多点触控判据
-│   └── TROUBLESHOOTING.md       排障记录、授权处理、还原命令
+│   ├── SYNC-TO-GITHUB.md        换电脑后拉取与同步说明
+│   ├── TROUBLESHOOTING.md       排障记录、授权处理、还原命令
+│   └── images/
+│       └── feishu-keyboard-top.jpg  设备实物照片
 ├── src/
 │   ├── FeishuKeys.swift         最终守护进程（419 行）
 │   ├── HIDProbe.swift           原始报告探针
